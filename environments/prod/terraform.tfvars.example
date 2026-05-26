@@ -1,0 +1,19 @@
+aws_region         = "us-east-1"
+name_prefix        = "oficina-mecanica"
+cluster_name       = "oficina-mecanica-eks"
+kubernetes_version = "1.29"
+vpc_cidr           = "10.0.0.0/16"
+node_instance_type = "t3.medium"
+node_min_size      = 2
+node_max_size      = 4
+node_desired_size  = 2
+namespace          = "auto-repair-shop"
+image_tag          = "latest"
+
+# Secrets — passar via TF_VAR_* ou GitHub Secrets:
+# database_url          = "postgresql://..."
+# jwt_secret            = "..."
+# admin_email           = "admin@oficina.app"
+# admin_password        = "..."
+# new_relic_license_key = "..."
+# notify_lambda_url     = "https://xyz.execute-api.us-east-1.amazonaws.com/prod/notify/status-change"

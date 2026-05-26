@@ -1,0 +1,15 @@
+.terraform/
+.terraform.lock.hcl
+*.tfstate
+*.tfstate.*
+*.tfplan
+*.tfvars.local
+crash.log
+*.pem
+*.key
+.env
+.env.*
+.DS_Store
+.vscode/
+.idea/
+kubeconfig*
