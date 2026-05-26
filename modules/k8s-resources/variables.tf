@@ -29,8 +29,8 @@ variable "new_relic_license_key" {
 }
 
 variable "image_repository" {
+  description = "ECR repository URL"
   type        = string
-  description = "URL do ECR repository (vem do módulo eks)"
 }
 
 variable "image_tag" {
@@ -39,7 +39,7 @@ variable "image_tag" {
 }
 
 variable "notify_lambda_url" {
+  description = "Lambda /notify/status-change endpoint URL"
   type        = string
-  description = "URL completa do endpoint Lambda /notify/status-change (vem do repo-lambda-auth)"
   default     = ""
 }

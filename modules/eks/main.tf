@@ -101,7 +101,6 @@ resource "aws_eks_node_group" "main" {
   ]
 }
 
-# Addons
 resource "aws_eks_addon" "vpc_cni" {
   cluster_name = aws_eks_cluster.main.name
   addon_name   = "vpc-cni"
@@ -120,7 +119,6 @@ resource "aws_eks_addon" "kube_proxy" {
   depends_on   = [aws_eks_node_group.main]
 }
 
-# ECR repository pra imagem da app
 resource "aws_ecr_repository" "app" {
   name                 = "${var.cluster_name}-app"
   image_tag_mutability = "MUTABLE"

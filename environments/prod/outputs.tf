@@ -19,6 +19,5 @@ output "service_load_balancer_hostname" {
 }
 
 output "kubeconfig_command" {
-  description = "Comando pra atualizar o kubeconfig local"
-  value       = "aws eks update-kubeconfig --name ${module.eks.cluster_name} --region ${var.aws_region}"
+  value = "aws eks update-kubeconfig --name ${module.eks.cluster_name} --region ${var.aws_region}"
 }

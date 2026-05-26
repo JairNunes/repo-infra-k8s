@@ -1,15 +1,15 @@
 variable "vpc_cidr" {
-  description = "CIDR block da VPC"
+  description = "VPC CIDR block"
   type        = string
   default     = "10.0.0.0/16"
 }
 
 variable "name_prefix" {
-  description = "Prefixo dos recursos"
+  description = "Resource name prefix"
   type        = string
 }
 
 variable "cluster_name" {
-  description = "Nome do cluster EKS (usado em tags)"
+  description = "EKS cluster name (used in tags)"
   type        = string
 }

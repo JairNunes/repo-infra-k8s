@@ -1,10 +1,10 @@
 variable "cluster_name" {
-  description = "Nome do cluster EKS"
+  description = "EKS cluster name"
   type        = string
 }
 
 variable "kubernetes_version" {
-  description = "Versão do Kubernetes"
+  description = "Kubernetes version"
   type        = string
   default     = "1.29"
 }
@@ -18,7 +18,7 @@ variable "private_subnet_ids" {
 }
 
 variable "node_instance_type" {
-  description = "Tipo de instância dos worker nodes"
+  description = "Worker node instance type"
   type        = string
   default     = "t3.medium"
 }

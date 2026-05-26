@@ -24,12 +24,12 @@ jobs:
       - uses: hashicorp/setup-terraform@v3
         with:
           terraform_version: ${{ env.TF_VERSION }}
-      - name: terraform fmt
+      - name: fmt
         run: terraform fmt -check -recursive
-      - name: terraform init (no backend)
+      - name: init
         working-directory: ${{ env.WORKING_DIR }}
         run: terraform init -backend=false
-      - name: terraform validate
+      - name: validate
         working-directory: ${{ env.WORKING_DIR }}
         run: terraform validate
 
