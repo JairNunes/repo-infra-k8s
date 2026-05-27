@@ -24,13 +24,13 @@ resource "kubernetes_config_map" "app" {
   }
 
   data = {
-    PORT             = "3000"
-    NODE_ENV         = "production"
-    JWT_EXPIRES_IN   = "24h"
-    DATABASE_URL     = var.database_url
-    NEW_RELIC_APP_NAME = "oficina-mecanica-api"
+    PORT                = "3000"
+    NODE_ENV            = "production"
+    JWT_EXPIRES_IN      = "24h"
+    DATABASE_URL        = var.database_url
+    NEW_RELIC_APP_NAME  = "oficina-mecanica-api"
     NEW_RELIC_LOG_LEVEL = "info"
-    NOTIFY_LAMBDA_URL  = var.notify_lambda_url
+    NOTIFY_LAMBDA_URL   = var.notify_lambda_url
   }
 }
 
@@ -41,10 +41,10 @@ resource "kubernetes_secret" "app" {
   }
 
   data = {
-    JWT_SECRET             = var.jwt_secret
-    ADMIN_EMAIL            = var.admin_email
-    ADMIN_PASSWORD         = var.admin_password
-    NEW_RELIC_LICENSE_KEY  = var.new_relic_license_key
+    JWT_SECRET            = var.jwt_secret
+    ADMIN_EMAIL           = var.admin_email
+    ADMIN_PASSWORD        = var.admin_password
+    NEW_RELIC_LICENSE_KEY = var.new_relic_license_key
   }
 
   type = "Opaque"
@@ -77,8 +77,8 @@ resource "kubernetes_deployment" "app" {
 
       spec {
         container {
-          name  = "api"
-          image = "${var.image_repository}:${var.image_tag}"
+          name              = "api"
+          image             = "${var.image_repository}:${var.image_tag}"
           image_pull_policy = "Always"
 
           port {
