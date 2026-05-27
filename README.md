@@ -1,6 +1,6 @@
 # repo-infra-k8s
 
-Terraform do EKS, VPC, ECR e recursos K8s da API de Oficina Mecânica (Fase 3, FIAP 13SOAT — Grupo 72).
+Terraform do EKS, VPC, ECR e recursos K8s da API de Oficina Mecânica (Fase 3, FIAP 13SOAT — Grupo 75).
 
 ## Arquitetura
 
