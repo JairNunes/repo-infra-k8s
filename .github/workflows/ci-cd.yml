@@ -56,7 +56,7 @@ jobs:
       - working-directory: ${{ env.WORKING_DIR }}
         run: terraform init
       - working-directory: ${{ env.WORKING_DIR }}
-        run: terraform plan -out=tfplan
+        run: terraform plan -refresh=false -target=module.vpc -target=module.eks -out=tfplan
       - uses: actions/upload-artifact@v4
         with:
           name: tfplan
@@ -88,4 +88,4 @@ jobs:
       - working-directory: ${{ env.WORKING_DIR }}
         run: terraform init
       - working-directory: ${{ env.WORKING_DIR }}
-        run: terraform apply -auto-approve
+        run: terraform apply -auto-approve -refresh=false -target=module.vpc -target=module.eks
