@@ -2,6 +2,12 @@
 
 Terraform do EKS, VPC, ECR e recursos K8s da API de Oficina Mecânica (Fase 3, FIAP 13SOAT — Grupo 72).
 
+## Arquitetura
+
+![Componentes](https://raw.githubusercontent.com/JairNunes/repo-app/main/diagrams/01-componentes.png)
+
+Esse repo provisiona o bloco `EKS Cluster` (centro-direita) — VPC, nodes t3.medium, namespace `auto-repair-shop`, deployment com HPA 2-10, NLB Service e ECR. Conexão com o `RDS PostgreSQL` (canto inferior) sai do Pod via Prisma. Fontes editáveis em [`repo-app/diagrams/`](https://github.com/JairNunes/repo-app/tree/main/diagrams).
+
 ## Stack
 
 - AWS EKS 1.29 em 2 AZ
